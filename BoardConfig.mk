@@ -22,3 +22,6 @@ AB_OTA_PARTITIONS += \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
+
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
