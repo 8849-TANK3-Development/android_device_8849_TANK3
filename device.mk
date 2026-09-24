@@ -22,3 +22,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6985 \
+    fstab.mt6985.vendor_ramdisk
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.mt6895.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6895.rc
