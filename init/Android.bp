@@ -4,6 +4,29 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+cc_library_static {
+    name: "libinit_8849_TANK3",
+    srcs: [
+        "libinit_dalvik_heap.cpp",
+        "libinit_8849_version.cpp",
+        "libinit_utils.cpp",
+        "libinit_variant.cpp",
+    ],
+    include_dirs: ["system/libbase/include"],
+    export_include_dirs: ["include"],
+    recovery_available: true,
+}
+
+cc_library_static {
+    name: "init_8849_TANK3",
+    srcs: ["init_8849_TANK3.cpp"],
+    whole_static_libs: ["libinit_8849_TANK3"],
+    include_dirs: [
+        "system/libbase/include",
+        "system/core/init"],
+    recovery_available: true,
+}
+
 prebuilt_etc {
     name: "fstab.mt6895",
     src: "fstab.mt6895",
