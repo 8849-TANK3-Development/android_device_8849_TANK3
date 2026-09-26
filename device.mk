@@ -39,6 +39,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Modules
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.insmod.mt6985.cfg
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6985 \
