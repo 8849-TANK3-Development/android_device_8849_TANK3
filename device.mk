@@ -57,8 +57,18 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
+    fstab.enableswap \
     fstab.mt6985 \
-    fstab.mt6985.vendor_ramdisk
+    fstab.mt6985.vendor_ramdisk \
+    init.cgroup.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6895.rc \
+    init.mt6895.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6895.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
