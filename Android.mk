@@ -18,15 +18,6 @@ $(ALLOCATOR_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(ALLOCATOR_SYMLINK)
 
-EGL_LIBS := libGLES_mali.so
-EGL_SYMLINK := $(addprefix $(TARGET_OUT_VENDOR)/lib/,$(notdir $(EGL_LIBS)))
-EGL_SYMLINK += $(addprefix $(TARGET_OUT_VENDOR)/lib64/,$(notdir $(EGL_LIBS)))
-$(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf egl/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(EGL_SYMLINK)
-
 AUDIO_PRIMARY_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/audio.primary.mt6895.so
 AUDIO_PRIMARY_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/audio.primary.mt6895.so
 $(AUDIO_PRIMARY_SYMLINK): $(LOCAL_INSTALLED_MODULE)
@@ -51,5 +42,13 @@ $(MT6895_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf mt6895/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MT6895_SYMLINK)
+
+VULKAN_SYMLINK += $(TARGET_OUT_VENDOR)/lib/hw/vulkan.mt6895.so
+VULKAN_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/vulkan.mt6895.so
+$(VULKAN_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf ../egl/libGLES_mali.so $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(VULKAN_SYMLINK)
 
 endif
