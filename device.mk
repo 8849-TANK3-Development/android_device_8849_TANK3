@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6895.rc
 
+PRODUCT_PACKAGES += \
+    set_permissive.rc \
+    set_permissive.sh
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \

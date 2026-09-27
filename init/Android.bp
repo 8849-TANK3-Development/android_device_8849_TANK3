@@ -27,6 +27,12 @@ cc_library_static {
     recovery_available: true,
 }
 
+sh_binary {
+    name: "set_permissive.sh",
+    src: "set_permissive.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "fstab.enableswap",
     src: "fstab.enableswap",
@@ -92,6 +98,13 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.sensor_2_0.rc",
     src: "init.sensor_2_0.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "set_permissive.rc",
+    src: "set_permissive.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
