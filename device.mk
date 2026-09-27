@@ -93,7 +93,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Modules
 PRODUCT_PACKAGES += \
     init.insmod.sh \
-    init.insmod.mt6985.cfg
+    init.insmod.mt6895.cfg
 
 # Rootdir
 PRODUCT_PACKAGES += \
