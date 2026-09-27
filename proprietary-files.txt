@@ -1,5 +1,9 @@
 # Unpinned blobs from TANK3-user 13 TP1A.220624.014 root.20240418.114127 release-keys
 
+# AEE
+vendor/lib/libaedv.so
+vendor/lib64/libaedv.so
+
 # Display
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
