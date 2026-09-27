@@ -1,2 +1,2 @@
-#!/system/bin/sh
+#!/vendor/bin/sh
 setenforce 0
