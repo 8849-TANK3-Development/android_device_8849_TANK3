@@ -1,3 +1,18 @@
+# Audio
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+vendor.audio.powerhal.power.dl=true
+vendor.audio.powerhal.power.ul=true
+vendor.audio.usb.iems.period_us=5000
+vendor.audio.usb.super_hifi=true
+persist.vendor.bluetooth.leaudio_mode=ums-cg
+ro.vendor.mtk_audio_alac_support=1
+ro.vendor.mtk_audio_ape_support=1
+ro.vendor.mtk_audio_tuning_tool_ver=V1
+ro.vendor.mtk_hifiaudio_support=1
+
 # Display
 debug.mediatek.disp_decompress=1
 debug.mediatek.appgamepq_compress=1
